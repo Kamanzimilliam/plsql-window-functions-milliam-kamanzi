@@ -98,45 +98,91 @@ erDiagram
 
 All window function queries are located in [`window_functions.sql`](./window_functions.sql).
 
+---
+
 ### 4.1 Ranking Functions – Regional Equipment Leaders
 
 **Screenshot:**  
 ![Top Equipments](screenshots/8-topEquipments.png)
-_Interpretation:_  
-Ranks equipment by rental revenue within each region, guiding fleet allocation and investment.
+
+**Interpretation:**  
+This analysis ranks equipment by rental revenue within each region, helping management identify which assets are most profitable in different locations. The results show clear leaders in each region, guiding fleet allocation and investment decisions. (See Query 7 in `window_functions.sql`)
+
+---
 
 ### 4.2 Aggregate Functions – Revenue Trends
 
 **Screenshot:**  
 ![Aggregate Monthly Rentals](screenshots/7-aggregateMonthyRentals.png)
-_Interpretation:_  
-Shows cumulative rental revenue, revealing seasonal peaks and growth periods.
+
+**Interpretation:**  
+This analysis calculates cumulative rental revenue for each equipment over time. The running totals reveal seasonal peaks and periods of growth, allowing management to anticipate demand and optimize inventory. (See Query 8 in `window_functions.sql`)
+
+---
 
 ### 4.3 Navigation Functions – Growth Analysis
 
 **Screenshot:**  
-![LAG Growth](screenshots/10-LAG.png)  
-![LEAD Growth](screenshots/11-Lead.png)
-_Interpretation:_  
-Compares rental amounts month-to-month and forecasts future performance.
+![LAG Growth](screenshots/10-LAG.png)
+
+**Interpretation:**  
+This analysis compares each equipment’s rental amount to the previous period, showing growth or decline. The results help spot trends and periods of rapid change, supporting proactive business decisions. (See Query 10 in `window_functions.sql`)
+
+---
 
 ### 4.4 Distribution Functions – Customer Segmentation
 
 **Screenshot:**  
-![Customer Quartiles](screenshots/12-NTILE.png)  
-![CUME_DIST](screenshots/13-cumedist.png)
-_Interpretation:_  
-Groups customers by spend, supporting targeted offers and loyalty programs.
+![Customer Quartiles](screenshots/12-NTILE.png)
+
+**Interpretation:**  
+This analysis segments customers into quartiles based on their total spend, supporting targeted marketing and loyalty programs. The results show which customers are most valuable and where to focus retention efforts. (See Query 12 in `window_functions.sql`)
+
+---
 
 ### 4.5 Additional Window Functions
 
-- 3-month moving average maintenance cost: ![Average Maintenance](screenshots/14-averageMaintainance.png)
-- DENSE_RANK for equipment revenue: ![Dense Rank](screenshots/15-denseRank.png)
-- MAX rental amount per equipment: ![Max Rental](screenshots/16-maxRental.png)
-- Total maintenance cost per equipment: ![Total Maintenance](screenshots/17-totalMaintainanceperEquipement.png)
-- Partitioned rental count per customer: ![Rental Count](screenshots/18-countOver.png)
-- First rental date per equipment: ![First Rental Date](screenshots/19-firstValueOver.png)
-- Last maintenance cost per equipment: ![Last Maintenance Cost](screenshots/20-lastValueOver.png)
+**Screenshot:**  
+![Average Maintenance](screenshots/14-averageMaintainance.png)
+
+**Interpretation:**  
+Calculates the moving average of maintenance costs for each equipment, smoothing out fluctuations and helping plan budgets more effectively. (See Query 14 in `window_functions.sql`)
+
+**Screenshot:**  
+![Dense Rank](screenshots/15-denseRank.png)
+
+**Interpretation:**  
+Ranks equipment by total revenue, handling ties without skipping ranks. Useful for identifying consistently high-performing assets. (See Query 15 in `window_functions.sql`)
+
+**Screenshot:**  
+![Max Rental](screenshots/16-maxRental.png)
+
+**Interpretation:**  
+Shows the highest rental amount for each equipment, highlighting peak transactions and potential outliers. (See Query 16 in `window_functions.sql`)
+
+**Screenshot:**  
+![Total Maintenance](screenshots/17-totalMaintainanceperEquipement.png)
+
+**Interpretation:**  
+Sums maintenance costs for each equipment, supporting cost analysis and budgeting. (See Query 17 in `window_functions.sql`)
+
+**Screenshot:**  
+![Rental Count](screenshots/18-countOver.png)
+
+**Interpretation:**  
+Counts the number of rentals per customer, revealing frequent renters and supporting loyalty program design. (See Query 18 in `window_functions.sql`)
+
+**Screenshot:**  
+![First Rental Date](screenshots/19-firstValueOver.png)
+
+**Interpretation:**  
+Shows when each equipment was first rented, useful for lifecycle and utilization analysis. (See Query 19 in `window_functions.sql`)
+
+**Screenshot:**  
+![Last Maintenance Cost](screenshots/20-lastValueOver.png)
+
+**Interpretation:**  
+Displays the most recent maintenance cost for each equipment, supporting maintenance planning and cost control. (See Query 20 in `window_functions.sql`)
 
 ---
 
