@@ -87,10 +87,24 @@ erDiagram
 
 **Screenshots:**  
 ![Database Schema](screenshots/5-schema.png)
-![Customers](screenshots/1-customers.png)  
-![Equipment](screenshots/2-equipment.png)  
-![Rentals](screenshots/3-rentals.png)  
+
+<br>
+
+![Customers](screenshots/1-customers.png)
+
+<br>
+
+![Equipment](screenshots/2-equipment.png)
+
+<br>
+
+![Rentals](screenshots/3-rentals.png)
+
+<br>
+
 ![Maintenance](screenshots/4-maintenance.png)
+
+<br>
 
 ---
 
